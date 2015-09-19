@@ -4,7 +4,7 @@
 ;        Var_WinTitle
         Str_Version := "Version 1.9"
         Authorial := "張昱珩"
-        Date := "Tuesday, November 6th, 2005"
+        Date := "Sunday, November 6th, 2005"
 ;        Status_ESC_R := "r"
 
 ; Procedure:
