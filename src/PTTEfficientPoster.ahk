@@ -2,9 +2,9 @@
 ;        Str_Article
 ;        Var_Control
 ;        Var_WinTitle
-        Str_Version := "Version 1.8"
-        Authorial := "±i¬RÒ²"
-        Date := "Tuesday, November 6th, 2007"
+        Str_Version := "Version 1.9"
+        Authorial := "å¼µæ˜±ç©"
+        Date := "Tuesday, November 6th, 2005"
 ;        Status_ESC_R := "r"
 
 ; Procedure:
@@ -20,16 +20,16 @@ SetTitleMatchMode, 3 ; A window's title must exactly match WinTitle to be a matc
 ; Tray
     Menu, Tray, NoStandard
     Menu, Tray, Click, 1 ; Specify 1 for ClickCount to allow a single-click to activate the tray menu's default menu item.
-    Menu, Tray, Add, Åã¥Ü¥Dµøµ¡, Gui_Show_Hide
-    Menu, Tray, Add, ¼È°± ( Shift + F11 ), Label_Tray_Pause
-    Menu, Tray, Add, ­«·s¸ü¤J ( Shift + F12 ), Label_Tray_Reload
-    Menu, Tray, Add, Â÷¶}, Label_Tray_Exit
-    Menu, Tray, Default, Åã¥Ü¥Dµøµ¡
+    Menu, Tray, Add, é¡¯ç¤ºä¸»è¦–çª—, Gui_Show_Hide
+    Menu, Tray, Add, æš«åœ ( Shift + F11 ), Label_Tray_Pause
+    Menu, Tray, Add, é‡æ–°è¼‰å…¥ ( Shift + F12 ), Label_Tray_Reload
+    Menu, Tray, Add, é›¢é–‹, Label_Tray_Exit
+    Menu, Tray, Default, é¡¯ç¤ºä¸»è¦–çª—
 
     TrayTip, , PTT Efficient Poster, 1, 1
     SetTimer, Label_Remove_TrayTip, 1500
 
-; GUI ³¡¥÷
+; GUI éƒ¨ä»½
 
 ;    Gui, Add, Button, w74 h46 gP_Start, Start
 ;    Gui, Add, Button, x+6 w74 h46 gP_Stop, Stop
@@ -37,14 +37,14 @@ SetTitleMatchMode, 3 ; A window's title must exactly match WinTitle to be a matc
 
     Gui, Font, s18 Bold, Courier ; Consolas
     Gui, Add, Text, vMyText1, PTT Efficient Poster
-    Gui, Font, s12 norm, ²Ó©úÅé
-    Gui, Add, Edit, HwndMyEditHwnd r19 w580 ReadOnly vMyEdit, ¡½ ³nÅé¤¶²Ð`n`nPTT Efficient Poster ¬O¤@¤ä¬°¤FÅý¨Ï¥ÎªÌ¦b PTT µoªí¤å³¹«á¡A¯à±o¨ì¦X²zªº½Z¹S¦Ó½Ï¥Íªºµ{¦¡¡C¦]À³ PTT ­pºâ½Z¹Sªº¤è¦¡¡A¥»µ{¦¡·|¹³¥´¦r¾÷¤@¯ë¡A±N°Å¶KÃ¯¤¤ªº¤å³¹¡A¦b­I´º¦Û°Ê¡B³v¦r¶K¨ì PTT ¤¤¡C`n`n`n¡½ ³nÅé¯S¦â`n`n¡E¤ä´© BBS ±±¨î½X¡C`n¡E¤ä´©Âù¦â¥þ§Î¦r¡]¤@¦rÂù¦â¡^¡C`n¡E¤ä´© Big-5 ÂX¥R¦r¶°¡]¤ä´© Unicode ¸É§¹­pµe¤ºªº¤é¤å¦r¡^¡C`n¡E¤ä´©­I´º¶K¤å¡C`n¡E¤ä´©Á{®É¼È°±¶K¤å¡C`n¡E¤ä´© Windows 2000/XP/Vista/7 (x86 & x64)¡C`n`n`n¡½ ¨Ï¥Î«e·Ç³Æ`n`n¡E­×§ï PTT ¯¸¥x³]©w¦p¤U¡G`n`n¡@¡@(U)ser         ¡i ­Ó¤H³]©w°Ï ¡j`n¡@¡@¡@(U)Customize    ­Ó¤H¤Æ³]©w`n¡@¡@¡@¡@i. DBCS       ¦Û°Ê°»´úÂù¦ì¤¸¦r¶°(¦p¥þ«¬¤¤¤å)¡@¡@¡@¡@¡G¬O`n¡@¡@¡@¡@j. DBCS       ©¿²¤³s½uµ{¦¡¬°Âù¦ì¤¸¦r¶°°e¥Xªº­«½Æ«öÁä¡G¬O`n¡@¡@¡@¡@k. DBCS       ¸T¤î¦bÂù¦ì¤¸¤¤¨Ï¥Î¦â½X(¥h°£¤@¦rÂù¦â)¡@¡G§_`n`n`n¡½ ¨Ï¥Î»¡©ú`n`n¡E¶K¤å¤èªk¡G`n`n¡@1. ½Æ»s±ý±i¶Kªº¤å³¹¤º®e¨ì°Å¶KÃ¯¡C`n¡@¡@¡]¥i¦Û¦æ¦b°O¨Æ¥»¤¤¥ý±Æª©¦n¦A½Æ»s¡A¤]¥i½Æ»s PCMan ¤º«Øªº ANSI ½s¿è¾¹¤¤ªº±m¦â¤å¦r¡C¡^`n¡@2. ¶i¤Jµo¤åª¬ºA¡C`n¡@3. «ö¤U Shift + F10 ¶}©l±i¶K¡C`n¡@4. ¶}©l±i¶K«á¡A¥i¥H¤Á´«¨ì§Oªºµøµ¡°µ¨ä¥L¨Æ¡A°ß¿W¤£¥i¥H¦b PCMan ¤¤¥t¡@¡@ ¶}·s¤À­¶¡C`n`n¡E±i¶K§¹¦¨«áµ{¦¡·|¦Û°Ê¼u¥X´£¥Üµøµ¡¡C`n¡E±ý¼È°±±i¶K¡A½Ð«ö Shift + F11¡C¦b¤u§@¦C¹Ï¥Üªº¿ï³æ¤¤¨ú®ø¼È°±§Y¥iÄ~Äò¶K¤å¡C`n¡E±ý¨ú®ø±i¶K¡A½Ð«ö Shift + F12 ­«·s¸ü¤J¥»µ{¦¡¡A©ÎÃö³¬¥»µ{¦¡¡C
+    Gui, Font, s12 norm, ç´°æ˜Žé«”
+    Gui, Add, Edit, HwndMyEditHwnd r19 w580 ReadOnly vMyEdit, â–  è»Ÿé«”ä»‹ç´¹`n`nPTT Efficient Poster æ˜¯ä¸€æ”¯ç‚ºäº†è®“ä½¿ç”¨è€…åœ¨ PTT ç™¼è¡¨æ–‡ç« å¾Œï¼Œèƒ½å¾—åˆ°åˆç†çš„ç¨¿é…¬è€Œèª•ç”Ÿçš„ç¨‹å¼ã€‚å› æ‡‰ PTT è¨ˆç®—ç¨¿é…¬çš„æ–¹å¼ï¼Œæœ¬ç¨‹å¼æœƒåƒæ‰“å­—æ©Ÿä¸€èˆ¬ï¼Œå°‡å‰ªè²¼ç°¿ä¸­çš„æ–‡ç« ï¼Œåœ¨èƒŒæ™¯è‡ªå‹•ã€é€å­—è²¼åˆ° PTT ä¸­ã€‚`n`n`nâ–  è»Ÿé«”ç‰¹è‰²`n`nâ€§æ”¯æ´ BBS æŽ§åˆ¶ç¢¼ã€‚`nâ€§æ”¯æ´é›™è‰²å…¨å½¢å­—ï¼ˆä¸€å­—é›™è‰²ï¼‰ã€‚`nâ€§æ”¯æ´ Big-5 æ“´å……å­—é›†ï¼ˆæ”¯æ´ Unicode è£œå®Œè¨ˆç•«å…§çš„æ—¥æ–‡å­—ï¼‰ã€‚`nâ€§æ”¯æ´èƒŒæ™¯è²¼æ–‡ã€‚`nâ€§æ”¯æ´è‡¨æ™‚æš«åœè²¼æ–‡ã€‚`nâ€§æ”¯æ´ Windows 2000/XP/Vista/7 (x86 & x64)ã€‚`n`n`nâ–  ä½¿ç”¨å‰æº–å‚™`n`nâ€§ä¿®æ”¹ PTT ç«™å°è¨­å®šå¦‚ä¸‹ï¼š`n`nã€€ã€€(U)ser         ã€ å€‹äººè¨­å®šå€ ã€‘`nã€€ã€€ã€€(U)Customize    å€‹äººåŒ–è¨­å®š`nã€€ã€€ã€€ã€€i. DBCS       è‡ªå‹•åµæ¸¬é›™ä½å…ƒå­—é›†(å¦‚å…¨åž‹ä¸­æ–‡)ã€€ã€€ã€€ã€€ï¼šæ˜¯`nã€€ã€€ã€€ã€€j. DBCS       å¿½ç•¥é€£ç·šç¨‹å¼ç‚ºé›™ä½å…ƒå­—é›†é€å‡ºçš„é‡è¤‡æŒ‰éµï¼šæ˜¯`nã€€ã€€ã€€ã€€k. DBCS       ç¦æ­¢åœ¨é›™ä½å…ƒä¸­ä½¿ç”¨è‰²ç¢¼(åŽ»é™¤ä¸€å­—é›™è‰²)ã€€ï¼šå¦`n`n`nâ–  ä½¿ç”¨èªªæ˜Ž`n`nâ€§è²¼æ–‡æ–¹æ³•ï¼š`n`nã€€1. è¤‡è£½æ¬²å¼µè²¼çš„æ–‡ç« å…§å®¹åˆ°å‰ªè²¼ç°¿ã€‚`nã€€ã€€ï¼ˆå¯è‡ªè¡Œåœ¨è¨˜äº‹æœ¬ä¸­å…ˆæŽ’ç‰ˆå¥½å†è¤‡è£½ï¼Œä¹Ÿå¯è¤‡è£½ PCMan å…§å»ºçš„ ANSI ç·¨è¼¯å™¨ä¸­çš„å½©è‰²æ–‡å­—ã€‚ï¼‰`nã€€2. é€²å…¥ç™¼æ–‡ç‹€æ…‹ã€‚`nã€€3. æŒ‰ä¸‹ Shift + F9 é–‹å§‹å¼µè²¼ã€‚`nã€€4. é–‹å§‹å¼µè²¼å¾Œï¼Œå¯ä»¥åˆ‡æ›åˆ°åˆ¥çš„è¦–çª—åšå…¶ä»–äº‹ï¼Œå”¯ç¨ä¸å¯ä»¥åœ¨ PCMan ä¸­å¦ã€€ã€€ é–‹æ–°åˆ†é ã€‚`n`nâ€§å¼µè²¼å®Œæˆå¾Œç¨‹å¼æœƒè‡ªå‹•å½ˆå‡ºæç¤ºè¦–çª—ã€‚`nâ€§æ¬²æš«åœå¼µè²¼ï¼Œè«‹æŒ‰ Shift + F11ã€‚åœ¨å·¥ä½œåˆ—åœ–ç¤ºçš„é¸å–®ä¸­å–æ¶ˆæš«åœå³å¯ç¹¼çºŒè²¼æ–‡ã€‚`nâ€§æ¬²å–æ¶ˆå¼µè²¼ï¼Œè«‹æŒ‰ Shift + F12 é‡æ–°è¼‰å…¥æœ¬ç¨‹å¼ï¼Œæˆ–é—œé–‰æœ¬ç¨‹å¼ã€‚
 
-    Gui, Font, s10, ·s²Ó©úÅé
-    Gui, Add, Statusbar,,¡@¶¢¸m
+    Gui, Font, s10, æ–°ç´°æ˜Žé«”
+    Gui, Add, Statusbar,,ã€€é–’ç½®
     SB_SetParts(200)
-;    Gui, Add, Text,, Shift + F11 : ¶}©l³v¦r¶K¤å
-;    Gui, Add, Text,, Shift + F12 : °±¤î
+;    Gui, Add, Text,, Shift + F11 : é–‹å§‹é€å­—è²¼æ–‡
+;    Gui, Add, Text,, Shift + F12 : åœæ­¢
     Gui, Add, Text, y+10, %Date% - %Str_Version% -
     Gui, Font, cBlue
     Gui, Add, Text, x+5 gLink1 vURL_Link1, %Authorial%
@@ -94,13 +94,13 @@ GuiSize:
     {
         Sleep, 400
         Gui, Hide
-        Menu, Tray, Rename, ÁôÂÃ¥Dµøµ¡, Åã¥Ü¥Dµøµ¡
+        Menu, Tray, Rename, éš±è—ä¸»è¦–çª—, é¡¯ç¤ºä¸»è¦–çª—
         Status_Gui := 0
     }
 Return
 
 GuiClose:
-    MsgBox, 4,, ½T©wÃö³¬ PTT Efficient Poster¡H
+    MsgBox, 4,, ç¢ºå®šé—œé–‰ PTT Efficient Posterï¼Ÿ
     ifMsgBox Yes
     {
         ExitApp
@@ -114,11 +114,11 @@ Return
 Label_Tray_Pause:
     if A_IsPaused = 1
     {
-        Menu, Tray, UnCheck, ¼È°± ( Shift + F11 )
+        Menu, Tray, UnCheck, æš«åœ ( Shift + F11 )
     }
     else
     {
-        Menu, Tray, Check, ¼È°± ( Shift + F11 )
+        Menu, Tray, Check, æš«åœ ( Shift + F11 )
     }
     Pause
 Return
@@ -128,7 +128,7 @@ Label_Tray_Reload:
 Return
 
 Label_Tray_Exit:
-    MsgBox, 4,, ½T©wÃö³¬ PTT Efficient Poster¡H
+    MsgBox, 4,, ç¢ºå®šé—œé–‰ PTT Efficient Posterï¼Ÿ
     ifMsgBox Yes
     {
         ExitApp
@@ -139,7 +139,7 @@ Gui_Show_Hide:
     if Status_Gui = 1
     {
         Gui, Hide
-        Menu, Tray, Rename, ÁôÂÃ¥Dµøµ¡, Åã¥Ü¥Dµøµ¡
+        Menu, Tray, Rename, éš±è—ä¸»è¦–çª—, é¡¯ç¤ºä¸»è¦–çª—
         Status_Gui := 0
     }
     else
@@ -148,13 +148,13 @@ Gui_Show_Hide:
         ControlFocus,, ahk_id %GuiHwnd%
         SendMessage, 177, -1, 0,, %hMyTextBox% ; http://msdn.microsoft.com/en-gb/library/bb761661%28VS.85%29.aspx
 
-        Menu, Tray, Rename, Åã¥Ü¥Dµøµ¡, ÁôÂÃ¥Dµøµ¡
+        Menu, Tray, Rename, é¡¯ç¤ºä¸»è¦–çª—, éš±è—ä¸»è¦–çª—
         Status_Gui := 1
     }
 Return
 
 
-+F10 Up::
++F9 Up::
     KeyWait, Shift, P
     F_Get_Control_and_ahk_ID()
     InputStr := Clipboard
@@ -167,7 +167,7 @@ Return
 
 +F11 Up::
     GoSub, Label_Tray_Pause
-;    SB_SetText("¡@¶¢¸m")
+;    SB_SetText("ã€€é–’ç½®")
 Return
 
 +F12 Up::
@@ -211,7 +211,7 @@ F_Get_AIPR_and_Tweak_It()
     }
     if *(&(Var_AIPR) + Length_Var_AIPR - 11) = 114 ; 114 = r
     {
-        ; ESC-R Ãö³¬¦Û°Ê°»´úÂù¦ì¤¸
+        ; ESC-R é—œé–‰è‡ªå‹•åµæ¸¬é›™ä½å…ƒ
         ; http://www.autohotkey.com/docs/misc/PostMessageList.htm
         PostMessage, 0x102, 0x1B,, %Var_Control%, ahk_ID %Var_WinTitle% ; 0X102 = WM_CHAR ; 0x1B = ESC
         PostMessage, 0x102, 0x52,, %Var_Control%, ahk_ID %Var_WinTitle% ; 0X102 = WM_CHAR ; 0x52 = R
@@ -267,7 +267,7 @@ F_SendByWmImeChar()
     SetFormat, float, 0.0
     Dollar += 0
     SetFormat, float, 6.2
-    SB_SetText("¡@¥»¦¸µoªí¤å³¹¬ù»Ý " . Minute . " ¤À¡A¬ù¥iÀò±o " . Dollar . " P¡C", 2)
+    SB_SetText("ã€€æœ¬æ¬¡ç™¼è¡¨æ–‡ç« ç´„éœ€ " . Minute . " åˆ†ï¼Œç´„å¯ç²å¾— " . Dollar . " Pã€‚", 2)
 
     InputStrPtr := &InputStr
 ;    InputStrPtr := &OutputVar
@@ -346,7 +346,7 @@ F_SendByWmImeChar()
         else if *InputStrPtr > 0 and *InputStrPtr <= 127
         {
 /*
-            if *InputStrPtr = 10 or *InputStrPtr = 13 ; PCMan ­n #13 ¤~¯à´«¦æ¡C
+            if *InputStrPtr = 10 or *InputStrPtr = 13 ; PCMan è¦ #13 æ‰èƒ½æ›è¡Œã€‚
             {
                 OutputStr := 13
                 InputStrPtr ++
@@ -409,8 +409,8 @@ F_SendByWmImeChar()
         {
             PostMessage, 0x102, 0x1B,, %Var_Control%, ahk_ID %Var_WinTitle% ; 0X102 = WM_CHAR ; 0x1B = ESC
             PostMessage, 0x102, 0x52,, %Var_Control%, ahk_ID %Var_WinTitle% ; 0X102 = WM_CHAR ; 0x52 = R
-            SB_SetText("¡@¶¢¸m")
-            MsgBox, §¹¦¨¡C
+            SB_SetText("ã€€é–’ç½®")
+            MsgBox, å®Œæˆã€‚
             break
         }
 
@@ -418,7 +418,7 @@ F_SendByWmImeChar()
         SetFormat, float, 0.2
         p += 0
         SetFormat, float, 6.2
-        SB_SetText("¡@¤w§¹¦¨ " . p . " %", 1)
+        SB_SetText("ã€€å·²å®Œæˆ " . p . " %", 1)
 
         if Delay = 1050
         {
@@ -439,7 +439,7 @@ F_SendASC(String)
 {
     Global
     i := StrLen(String)
-    ControlGet, h1, hWnd,, ¥x¤j§å½ð½ð¹ê·~§{ - PCMan
+    ControlGet, h1, hWnd,, å°å¤§æ‰¹è¸¢è¸¢å¯¦æ¥­åŠ - PCMan
     if i = 0
       return
     loop,
