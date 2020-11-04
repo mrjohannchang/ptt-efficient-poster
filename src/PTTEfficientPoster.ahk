@@ -1,5 +1,5 @@
-/*
- * Copyright 2005-2018 Henry Chang
+﻿/*
+ * Copyright 2005-2021 Henry Chang
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -94,7 +94,7 @@ Return
 
 
 Link1:
-    run http://changyuheng.github.io/
+    run https://about.me/changyuheng
 Return
 
 GuiSize:
@@ -165,11 +165,7 @@ Return
 +F9 Up::
     KeyWait, Shift, P
     F_Get_Control_and_ahk_ID()
-    InputStr := Clipboard
-    F_Get_AIPR_and_Tweak_It()
-    Clipboard := InputStr
-
-    F_SendByWmImeChar()
+    F_SendByClipboard()
 ;    ControlSend, BBS_View1, %Str_Article%, PCMan
 Return
 
@@ -207,7 +203,7 @@ F_Get_AIPR_and_Tweak_It()
     Send, {C}
     KeyWait, C, L
     Sleep, 250
-    Transform, Var_AIPR, Unicode
+;    Transform, Var_AIPR, Unicode
 ;    Var_AIPR := Clipboard
     Length_Var_AIPR := StrLen(Var_AIPR)
 ;    AA := *(&(Var_AIPR) + Length_Var_AIPR - 14)
@@ -228,7 +224,10 @@ F_Get_AIPR_and_Tweak_It()
 
 F_SendByWmImeChar()
 {
-    Global
+    InputStr := Clipboard
+    F_Get_AIPR_and_Tweak_It()
+    Clipboard := InputStr
+
 ;    InputStrPtr := &InputStr
 ;    Transform, OutputVar, Unicode
 ;    InputStr := Clipboard
@@ -441,6 +440,57 @@ F_SendByWmImeChar()
     return
 }
 
+F_SendByClipboard()
+{
+    Global
+
+    SetKeyDelay, 100, 100
+
+    SavedClipboard := Clipboard
+    InputStr := Clipboard
+    Len := StrLen(InputStr)
+    Done := 0
+
+    Minute := Len * 0.56 / 60
+    Dollar := Len * 0.5
+    SetFormat, float, 0.2
+    Minute += 0
+    SetFormat, float, 0.0
+    Dollar += 0
+    SetFormat, float, 6.2
+    SB_SetText("　本次發表文章約需 " . Minute . " 分，約可獲得 " . Dollar . " P。", 2)
+
+    Loop,
+    {
+        Random, Delay125, 100, 150
+        Random, Delay525, 500, 550
+        Random, Delay1050, 1000, 1100
+
+        if StrLen(InputStr) = 0
+        {
+            SB_SetText("　閒置")
+            MsgBox, 完成。
+            break
+        }
+
+        OutputStr := SubStr(InputStr, 1, 1)
+        InputStr := SubStr(InputStr, 2)
+        Clipboard := OutputStr
+        ControlSend, %Var_Control%, {ShiftDown}{Insert}{ShiftUp}, ahk_ID %Var_WinTitle%
+        Sleep, %Delay1050%
+
+        Done++
+
+        p := Done/Len*100
+        SetFormat, float, 0.2
+        p += 0
+        SetFormat, float, 6.2
+        SB_SetText("　已完成 " . p . " %", 1)
+    }
+
+    Clipboard := SavedClipboard
+    return
+}
 
 /*
 F_SendASC(String)
