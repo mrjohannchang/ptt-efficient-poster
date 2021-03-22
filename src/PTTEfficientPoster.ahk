@@ -230,7 +230,6 @@ Run() {
     WM_KEYDOWN := 0x100
     WM_KEYUP := 0x101
     WM_CHAR := 0x102
-    Random, Delay525, 500, 550
 
     Minute := Len * 0.525 / 60
     Reward := Len * 0.5
@@ -241,15 +240,25 @@ Run() {
     SetFormat, float, 6.2
     SB_SetText("　本次發表文章約需 " . Minute . " 分，約可獲得 " . Reward . " P。", 2)
 
+    LastContent := ""
+
     Loop, %Len%
     {
         PtrContent := *Ptr
+
+        If (StrLen(LastContent) > 0 && PtrContent != LastContent) {
+            Random, Interval, 500, 550
+            Sleep, %Interval%
+        }
+
         If (PtrContent = 0xA || PtrContent = 0xD) {
             PostMessage, WM_CHAR, 0xD, , %ControlName%, ahk_id %WindowID%
             PostMessage, WM_CHAR, 0xA, , %ControlName%, ahk_id %WindowID%
         } Else {
             PostMessage, WM_CHAR, PtrContent, , %ControlName%, ahk_id %WindowID%
         }
+
+        LastContent := PtrContent
         Ptr++
 
         Stat := (Ptr - &Content) / Len * 100
@@ -257,8 +266,6 @@ Run() {
         Stat += 0
         SetFormat, float, 6.2
         SB_SetText("　已完成 " . Stat . " %", 1)
-
-        Sleep, %Delay525%
     }
 
     SB_SetText("　閒置")
