@@ -231,7 +231,7 @@ Run() {
     WM_KEYUP := 0x101
     WM_CHAR := 0x102
 
-    Minute := Len * 0.525 / 60
+    Minute := Len * 0.6 / 60
     Reward := Len * 0.5
     SetFormat, float, 0.2
     Minute += 0
@@ -247,7 +247,7 @@ Run() {
         PtrContent := *Ptr
 
         If (StrLen(LastContent) > 0 && PtrContent != LastContent) {
-            Random, Interval, 500, 550
+            Random, Interval, 500, 700, Ptr
             Sleep, %Interval%
         }
 
