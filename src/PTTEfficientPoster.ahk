@@ -232,7 +232,7 @@ Run() {
     WM_CHAR := 0x102
 
     Minute := Len * 1 / 60
-    Reward := Len * 0.5
+    Reward := Len * 0.25 * 0.8
     SetFormat, float, 0.2
     Minute += 0
     SetFormat, float, 0.0
