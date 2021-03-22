@@ -8,7 +8,7 @@
 
 ; N.B.: Only works with the AutoHotkey ANSI version.
 
-Version := "Version 2.3"
+Version := "Version 2.4"
 Author := "Henry Chang"
 FirstVersionDate := "Sunday, November 6th, 2005"
 Intro := ""
